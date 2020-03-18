@@ -9,6 +9,9 @@ const common = require('./webpack.common.js')
 module.exports = merge(common, {
   devtool: 'source-map',
   mode: 'production',
+  output: {
+    publicPath: './'
+  },
   optimization: {
     minimizer: [
       new TerserPlugin({
