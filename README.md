@@ -16,7 +16,7 @@
 
 ## Usage
 
-- Write all your ES2015+ Javascript code in src/js` and SCSS styling in `src/style``. Store static files in `public`.
+- Write all your ES2015+ Javascript code in `src/js` and SCSS styling in `src/style`. Store static files in `public`.
 - Every Pug pages in `src/views` will generate an html page with the same name.
 
 ### In development
