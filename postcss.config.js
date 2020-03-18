@@ -2,7 +2,7 @@ const whitelistPatterns = []
 
 const purgecss = require("@fullhuman/postcss-purgecss")({
   content: [
-    './src/**/*.html',
+    './src/views/**/*.pug',
     './src/**/*.vue'
   ],
   whitelistPatterns: whitelistPatterns,
