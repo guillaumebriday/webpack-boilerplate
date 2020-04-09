@@ -92,9 +92,9 @@ module.exports = {
           // this applies to pug imports inside JavaScript
           {
             use: [
-              'raw-loader',
+              'html-loader',
               {
-                loader: 'pug-plain-loader',
+                loader: 'pug-html-loader',
                 options: {
                   pretty: process.env.NODE_ENV !== 'production'
                 }
@@ -104,17 +104,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|ico)$/,
+        test: /\.(png|ico|jpe?g|gif|svg)$/,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name]-[hash].[ext]',
-            outputPath: 'assets/'
+            outputPath: 'assets/',
+            publicPath: '../assets/'
           }
         }]
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: 'file-loader',
           options: {
